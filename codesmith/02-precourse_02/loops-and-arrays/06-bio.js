@@ -12,29 +12,15 @@ const bios = [];
 // ADD CODE HERE
 
 /*
- * forEach() Iteration order:
+ * Loop and push each index to new * array with predefined text.
  *
- * For every time firstNames runs,
- * lastNames runs once,
- * places runs three times.
- * Until firstNames runs through complete array
- * -
+ * If [i] is removed, loop will push full array
+ * into bios[] each time it runs.
+ *-
  * @harryrf3
  **/
-firstNames.forEach((element) => {
-  // bios.push(`My name is ${element}`);
-  bios.push(`1 firstNames`);
-  //
-  lastNames.forEach((element) => {
-    // bios.push(` ${element}`);
-    bios.push(`2 lastNames`);
-    //
-    places.forEach((element) => {
-      // bios.push(`and I am from ${element}`);
-      bios.push(element);
-    });
-  });
-  console.log(bios);
-});
 
-console.log('done')
+for (let i = 0; i < firstNames.length; i++) {
+  bios.push(`My name is ${firstNames[i]} ${lastNames[i]} and I am from ${places[i]}`);
+}
+console.log(bios);
