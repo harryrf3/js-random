@@ -1,7 +1,6 @@
-const firstNames = ["Jon", "Arya", "Jamie"];
-const lastNames = ["Snow", "Stark", "Lannister"];
-const places = ["The Wall", "Winterfell", "Kings Landing"];
-
+const firstNames = ['Jon', 'Arya', 'Jamie'];
+const lastNames = ['Snow', 'Stark', 'Lannister'];
+const places = ['The Wall', 'Winterfell', 'Kings Landing'];
 
 const bios = [];
 
@@ -12,3 +11,30 @@ const bios = [];
 
 // ADD CODE HERE
 
+/*
+ * forEach() Iteration order:
+ *
+ * For every time firstNames runs,
+ * lastNames runs once,
+ * places runs three times.
+ * Until firstNames runs through complete array
+ * -
+ * @harryrf3
+ **/
+firstNames.forEach((element) => {
+  // bios.push(`My name is ${element}`);
+  bios.push(`1 firstNames`);
+  //
+  lastNames.forEach((element) => {
+    // bios.push(` ${element}`);
+    bios.push(`2 lastNames`);
+    //
+    places.forEach((element) => {
+      // bios.push(`and I am from ${element}`);
+      bios.push(element);
+    });
+  });
+  console.log(bios);
+});
+
+console.log('done')
