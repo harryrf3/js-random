@@ -9,8 +9,8 @@
  ***/
 
 // ADD CODE HERE
-function addS(str, letter) {
-  return str.concat(letter);
+function addS(str, amendment) {
+  return str.concat(amendment);
 } 
 
 // Uncomment these to check your work!
