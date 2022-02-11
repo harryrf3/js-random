@@ -1,6 +1,8 @@
 /**
  * Create a function addTwo that accepts
- * a number, and returns the number plus 2.
+ * a number, and returns the _number plus 2_.
+ * 
+ * typeof is also checked and retuns _function_
  *-
  * @harryrf3 (2022-02-11T14:25:20.000-05:00)
  ***/
