@@ -30,5 +30,5 @@ combined;
     Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
  */
 
-  const indexOf = arr2.indexOf('d');
+const indexOf = arr2.indexOf('d');
 indexOf;
