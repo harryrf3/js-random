@@ -6,10 +6,21 @@
  * @harryrf3 (2022-03-05T23:24:07.000-05:00)
  ***/
 
- function mergingTripletsAndQuints(array1, array2) {
+function mergingTripletsAndQuints (array1, array2) {
   // ADD CODE HERE
- }
- 
- // Uncomment these to check your work!
- // console.log(mergingTripletsAndQuints([1, 2, 3, 4, 5, 15], [1, 3, 6, 7, 8, 9])); // expected log [1, 2, 9, 4, 13, 24]
- // console.log(mergingTripletsAndQuints([1, 1, 3, 9, 5, 15], [1, 2, 3, 4, 5, 6])); // expected log [1, 1, 6, 13, 10, 21]
+  let result = [];
+  for (const element of array1) {
+    if (element % 3 || element % 5) {
+     result = array1.map((num, index) => {
+       return num + array2[index]
+      })
+    }
+  }
+  return result;
+}
+
+
+
+  // Uncomment these to check your work!
+  console.log(mergingTripletsAndQuints([1, 2, 3, 4, 5, 15], [1, 3, 6, 7, 8, 9])); // expected log [1, 2, 9, 4, 13, 24]
+  console.log(mergingTripletsAndQuints([1, 1, 3, 9, 5, 15], [1, 2, 3, 4, 5, 6])); // expected log [1, 1, 6, 13, 10, 21]

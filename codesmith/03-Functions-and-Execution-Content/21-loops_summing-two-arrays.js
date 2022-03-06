@@ -9,8 +9,8 @@ function mergingElements (array1, array2) {
   // ADD CODE HERE
   let result = [];
   for (const element of array1) {
-    result = array1.map((num, index) => {
-      return num + array2[index];
+    result = array1.map((num, element) => {
+      return num + array2[element];
     });
   }
   return result;
