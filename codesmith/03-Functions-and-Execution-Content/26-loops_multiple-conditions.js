@@ -7,16 +7,40 @@
  * @harryrf3 (2022-03-17T07:48:03.000-05:00)
  ***/
 
-
 function addingAllTheWeirdStuff (array1, array2) {
-    // The sum of all ODD numbers in array2
-      // Add to each element UNDER 10 in array1
+  // Filter all odd numbers
+  const oddNumbers = array2.filter((item) => {
+    return [item] % 2 !== 0;
+  });
 
-    // The sum of all EVEN numbers in array2.
-      // Add to those OVER 10 in array1
+  // Filter all even numbers
+  const evenNumbers = array2.filter((item) => {
+    return [item] % 2 === 0;
 
-    // Any element in array2 < 20
-      // Add 1 to every element in array1
+  });
+
+  // Filter all numbers greater than 20
+  const greaterThan20 = array2.filter((item) => {
+    return [item] > 20;
+  });
+
+  if (oddNumbers) {
+    // Add the sum of all odd numbers in array2 to each element < 10 in array1
+    // 
+    console.log('ODD:', oddNumbers);
+  }
+
+  if (evenNumbers) {
+    // Add the sum of all even numbers in array2 to each element > 10 in array1
+    // 
+    console.log('EVEN:', evenNumbers);
+  }
+
+  if (greaterThan20) {
+    // Any element in array2 > 20, add 1 to every element in array1.
+    // 
+    console.log('> 20:', greaterThan20);
+  }
 }
 
 // Uncomment these to check your work!
