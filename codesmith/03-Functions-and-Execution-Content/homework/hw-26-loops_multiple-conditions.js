@@ -8,7 +8,7 @@
  ***/
 
 
- function addingAllTheWeirdStuff (array1, array2) {
+function addingAllTheWeirdStuff (array1, array2) {
 
   const oddSum = array2.reduce((sum, current) => current % 2 ? current + sum : 0 + sum, 0);
   const oddEven = array2.reduce((sum, current) => current % 2 === 0 ? current + sum : 0 + sum, 0);
