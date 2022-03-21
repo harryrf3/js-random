@@ -9,7 +9,15 @@
 
 
 // ADD CODE HERE 
+const addWaldo = function (obj) {
+  // can also use dot notation, (e.g. obj.Waldo = 'unknown',) this is not very modular, imo.
+  // obj.Waldo_dot = 'unknown'; // using dot notation
+
+  // using bracket notation makes the code more modular as both key and value can be read from a variable (e.g. obj[key] = value)
+  obj['Waldo'] = 'unknown'; // using bracket notation
+  return obj;
+};
 
 // Uncomment these to check your work!
-// const siliconValley = {'Richard': 'Hendricks', 'Erlich': 'Bachman', 'Bertram': 'Gilfoyle'}
-// console.log(addWaldo(siliconValley)) // should log:{ Richard: 'Hendricks', Erlich: 'Bachman', Bertram: 'Gilfoyle', Waldo: 'unknown' }
+const siliconValley = { 'Richard': 'Hendricks', 'Erlich': 'Bachman', 'Bertram': 'Gilfoyle' };
+console.log(addWaldo(siliconValley)); // should log:{ Richard: 'Hendricks', Erlich: 'Bachman', Bertram: 'Gilfoyle', Waldo: 'unknown' }
