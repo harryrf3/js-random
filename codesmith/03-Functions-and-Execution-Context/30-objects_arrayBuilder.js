@@ -5,10 +5,19 @@
  * @harryrf3 (2022-03-22T15:35:51.000-05:00)
  ***/
 
- function arrayBuilder(obj) {
-  // ADD CODE HERE
+function arrayBuilder (obj) {
+  const output = [];
+
+  for (const key in obj) {
+    let count = obj[key];
+    while (count > 0) {
+      output.push(key);
+      count--;
+    }
+  }
+  return output;
 }
 
 // Uncomment these to check your work!
-// console.log(arrayBuilder({'cats': 2, 'dogs': 1})); // => ['cats', 'cats', 'dogs']
-// console.log(arrayBuilder({})); // => []
+console.log(arrayBuilder({ 'cats': 2, 'dogs': 1 })); // => ['cats', 'cats', 'dogs']
+console.log(arrayBuilder({})); // => []
