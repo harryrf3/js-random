@@ -5,8 +5,8 @@
  ***/
 
 // MODIFY THE CODE BELOW 
-function functionDeclaration() {
+const myFunc = function () {
   return "Hi there!";
 }
 
-// console.log(myFunc()) //should log: "Hi there!"
+console.log(myFunc()) //should log: "Hi there!"
