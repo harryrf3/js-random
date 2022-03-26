@@ -7,7 +7,14 @@
  ***/
 
 // ADD CODE HERE
+function pluralize (array) {
+  let output = [];
+  for (let i = 0; i < array.length; i++) {
+    output.push(array[i] + 's');
+  }
+  return output;
+}
 
 // Uncomment these to check your work!
-// const animals = ["dog", "cat", "tree frog"];
-// console.log(pluralize(animals)); // should log: ["dogs", "cats", "tree frogs"]
+const animals = ["dog", "cat", "tree frog"];
+console.log(pluralize(animals)); // should log: ["dogs", "cats", "tree frogs"]
