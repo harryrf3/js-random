@@ -1,0 +1,1 @@
+There seems to be an error, in the opening part of the video you can see it touches on the next challenge which has two parts where you recreate map and forEach, so I didn't watch it.
