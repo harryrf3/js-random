@@ -25,8 +25,31 @@
  ***/
 
 // ADD CODE HERE
+function reduce (array, callback, accumulator) {
+  // 1. Keep track of accumulated output of each loop. Equal to initial value passed in when invoking callback function.
+  let accumulatedValue = accumulator;
+
+  // 2. Iterate over array
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    // 3. Pass in arguments provided during invocation
+    accumulatedValue = callback(accumulatedValue, element);
+    // 4. The callback's return value becomes the new accumulator value.
+    // 5. The next loop executes with this new accumulator value and keeps looping until `i` is no longer lesser than `array.length`.
+  }
+
+  /*   
+  // forEach equivalent of above for loop
+  array.forEach(element => {
+    return accumulatedValue = callback(accumulatedValue, element);
+  });
+  */
+
+  // 6. Return 
+  return accumulatedValue;
+}
 
 // Uncomment these to check your work!
-// const nums = [4, 1, 3];
-// const add = function(a, b) { return a + b; }
-// console.log(reduce(nums, add, 0)); // should log 8
+const nums = [4, 1, 3];
+const add = function (a, b) { return a + b; };
+console.log(reduce(nums, add, 0)); // should log 8
