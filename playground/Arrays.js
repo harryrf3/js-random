@@ -29,6 +29,8 @@ const people = [
 
     This method does not change the existing arrays, but instead returns a new array.
 
+    Syntax:
+    
     concat(value0, [value2], ... , [valueN])
 */
 
@@ -70,6 +72,8 @@ console.log(arrConcat8);
 
     The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
 
+    Syntax:
+
     copyWithin(target, [start], [end])
 */
 
@@ -78,10 +82,52 @@ console.log(arrCopyWithin1);
 
 
 /*
+  Array.prototype.entries()
+
+    The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+  
+    Syntax:
+
+    entries()
+*/
+
+const arrEntries = nums.entries();
+console.log(arrEntries);
+console.log(arrEntries.next());
+console.log(arrEntries.next().value);
+
+
+/*
+  Array.prototype.every()
+
+    The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+
+    Syntax:
+
+    // Arrow function
+    every((element, [index], [array]) => { ... } )
+
+    // Callback function
+    every(callbackFn, [thisArg])
+
+    // Inline callback function
+    every(function(element, [index], [array]) {  ...  }, [thisArg])
+*/
+
+const isBelowThreshold = (currentValue) => currentValue < 40;
+const array1 = [1, 30, 39, 29, 10, 13];
+const result = array1.every(isBelowThreshold);
+console.log(result);
+// log: true
+
+
+/*
   Array.prototype.fill() 
 
     Changes all array elements from start to end index to a static value and returns the modified array
 
+    Syntax:
+    
     fill(value, [start], [end])
 */
 
@@ -89,9 +135,58 @@ console.log(arrCopyWithin1);
 const arrReplace = nums.fill('replaced', 4, 6);
 console.log(arrReplace);
 
-const combined = nums.concat(letters);
-console.log(combined);
 
+/*
+  Array.prototype.filter()
+
+    The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+    Syntax:
+
+    // Arrow function
+    filter((element, index, array) => { ... } )
+
+    // Callback function
+    filter(callbackFn, [thisArg])
+
+    // Inline callback function
+    filter(function(element, index, array) { ... }, [thisArg])
+*/
+
+// Filter out anything greater than integer
+const arrFilter = nums.filter(element => {
+  return [element] > 50;
+});
+console.log(arrFilter);
+
+
+/*
+  Array.prototype.find()
+
+    The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+
+    Syntax:
+
+    // Arrow function
+    find((element, index, array) => { ... } )
+
+    // Callback function
+    find(callbackFn, [thisArg])
+
+    // Inline callback function
+    find(function(element, index, array) { ... }, [thisArg])
+*/
+
+// Finds next element in array greater than integer
+const arrFind = nums.find(element => element > 20);
+console.log(arrFind);
+
+
+/*
+  Array.prototype.findIndex()
+
+    The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1, indicating that no element passed the test.
+*/
 
 /* 
   Array.prototype.indexOf()
