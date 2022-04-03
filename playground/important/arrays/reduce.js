@@ -15,18 +15,20 @@ String.slice(start?: number, end?: number): string
 
 function union (arrays) {
   let finalArray = [];
-  const slicedArray = (start, end) => arrays.slice(start, end);
 
-  console.log(slicedArray(0, 1));
-  console.log(slicedArray(1, 2));
-  console.log(slicedArray(2, 3));
+  const sliced = ((start, end) => {
+    return arrays.slice(start, end);
+  })
+  console.log(sliced(0, 1));
+  console.log(sliced(1, 2));
+  console.log(sliced(2, 3));
 
 
-  // while (arrays.length) {
-
-  //   finalArray.push('test')
-  //   // console.log(finalArray);
-  // }
+  sliced.reduce((p, c) => {
+    if (p.find(c)) finalArray.push(c);
+  }, sliced);
+  console.log(finalArray);
+  return finalArray;
 }
 
 /*
