@@ -9,25 +9,34 @@
 
 // ADD CODE HERE
 // objOfMathces: a function that accepts two arrays and a callback and builds an object
-function objOfMatches (arr1, arr2, cb) {
+// function objOfMatches (key, value, callback) {
+//   /* 
+//     // reduce: reduce(outputObj, currentArr, {emptyObj})
+//     // callback: using the callback, test each element of the first input
+//       // if the ouput matches the second arrays corresponding element's index
+//         // the element from the first array becomes the key in the object
+//         // the element from the second array becomes the value in the object
+//   */
+// key
+// value
+// callback(key, value)
+// }
 
-  // reduce: reduce(outputObj, currentArr, {emptyObj})
-  // reduce: using the callback, test each element of the first input
-  // if the ouput matches the second arrays corresponding element's index
-  // the element from the first array becomes the key in the object
-  // the element from the second array becomes the value in the object
+console.log(uppercaser('test'))
 
-  return arr1.reduce((outputObj, currentArr) => {
-    arr2.forEach((element) => {
-      if (currentArr.includes(element)) {
-        outputObj += outputObj[element];
-      }
-    });
-    return cb(outputObj);
-  }, {});
-}
 // Uncomment these to check your work!
 const arr1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
 const arr2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
 function uppercaser (str) { return str.toUpperCase(); }
-console.log(objOfMatches(arr1, arr2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
+// console.log(objOfMatches(arr1, arr2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
+
+console.log(arr2.reduce.toString())
+
+  // return arr1.reduce((outputObj, currentArr) => {
+  //   arr2.forEach((element) => {
+  //     if (currentArr.includes(element)) {
+  //       outputObj += outputObj[element];
+  //     }
+  //   });
+  //   return cb(outputObj);
+  // }, {});
