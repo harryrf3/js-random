@@ -7,7 +7,37 @@
  * @harryrf3 (2022-04-03T17:03:26.000-05:00)
  ***/
 
+
 // ADD CODE HERE
+
+// Uncomment these to check your work!
+// const arr1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
+// const arr2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
+// function uppercaser(str) { return str.toUpperCase(); }
+// console.log(objOfMatches(arr1, arr2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // objOfMathces: a function that accepts two arrays and a callback and builds an object
 // function objOfMatches (key, value, callback) {
 //   /* 
@@ -21,22 +51,3 @@
 // value
 // callback(key, value)
 // }
-
-console.log(uppercaser('test'))
-
-// Uncomment these to check your work!
-const arr1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
-const arr2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
-function uppercaser (str) { return str.toUpperCase(); }
-// console.log(objOfMatches(arr1, arr2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
-
-console.log(arr2.reduce.toString())
-
-  // return arr1.reduce((outputObj, currentArr) => {
-  //   arr2.forEach((element) => {
-  //     if (currentArr.includes(element)) {
-  //       outputObj += outputObj[element];
-  //     }
-  //   });
-  //   return cb(outputObj);
-  // }, {});
