@@ -32,7 +32,3 @@ const objToArray = Object.entries(obj);
 // objToArray.reduce((index, element) => {
 //   console.log()
 // }, 0)
-
-// for (let element of objToArray) {
-  
-// }
