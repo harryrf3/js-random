@@ -10,6 +10,8 @@
  * @harryrf3 (2022-04-03T17:03:26.000-05:00)
 */
 
+const { callbacks } = require("browser-sync/dist/logger")
+
 
 // ADD CODE HERE
 
@@ -19,24 +21,34 @@
  * corresponding element by index of the second array.
 */
 
-const objOfMatches = (prev, index, callback) => {
+const objOfMatches = (prev, current, callback) => {
+
   /*
    * If match is found: (use elements to modify object)
    *  # first array: element = key
    *  # second array: element = value
   */
 
-  //
-  
+  // let obj = {}
+
+  prev.map(element => {
+    const obj = {}
+    if (callback(element) === current) {
+      console.log(element);
+      // obj[prev[element]] = current[element]
+    }
+    return obj
+  })
+
+  // return obj
 }
 
 
-
 // Uncomment these to check your work!
-// const arr1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
-// const arr2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
-// function uppercaser(str) { return str.toUpperCase(); }
-// console.log(objOfMatches(arr1, arr2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
+const arr1 = ['hi', 'howdy', 'bye', 'later', 'hello']
+const arr2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO']
+function uppercaser (str) { return str.toUpperCase() }
+console.log(objOfMatches(arr1, arr2, uppercaser)) // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
 
 
 
