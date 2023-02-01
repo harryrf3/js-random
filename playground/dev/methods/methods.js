@@ -21,9 +21,12 @@ const reverseArray = (arr) => {
 
 // .sort()
 
-const sortArray = [1112, 13, 2324, 34, 56, 500, 'Harry', 2, 'Ted']
+const words = ['ball', 'bat', 'base', 'baseball', 'player', 'fans', 'umpire', 'pitcher']
+const moreNums = [[1, 3], [2, 4], [5, 7], [6, 8], [7, 9]]
 
-const sorted = sortArray.sort();
+console.log(numbers.sort())
+console.log(words.sort())
+console.log(moreNums.sort())
 
 
 // console.log(sorted)
