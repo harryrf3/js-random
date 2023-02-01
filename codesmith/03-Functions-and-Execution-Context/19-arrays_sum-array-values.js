@@ -11,9 +11,11 @@
   arr.forEach(element => {
     total += element;
   });
+  
   // for (let i = 0; i < arr.length; i++) {
     // total += arr[i];
   // }
+
   return total;
 }
 
