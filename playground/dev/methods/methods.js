@@ -21,7 +21,7 @@ const reverseArray = (arr) => {
 
 // .sort()
 
-const sortArray = [1, 3, 4, 'Harry', 2, 'Ted']
+const sortArray = [1112, 13, 2324, 34, 56, 500, 'Harry', 2, 'Ted']
 
 const sorted = sortArray.sort();
 
