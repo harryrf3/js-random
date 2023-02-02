@@ -32,7 +32,7 @@ console.log(moreNums.sort())
 // console.log(sorted)
 
 
-// reduce pre-ES6
+// reduce (pre-reduce method)
 
 function reduce(array, callback, accumulator) {
   // copy initial accumulator value
