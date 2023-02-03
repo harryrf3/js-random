@@ -9,3 +9,13 @@ const summonPuzzleInput = async () => {
 const puzzleInput = await summonPuzzleInput();
 
 console.log(puzzleInput);
+
+
+// Capitalize the first letter of a word
+const str = 'hello';
+
+function capitalizeFirstLetter (string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+console.log(capitalizeFirstLetter(str));
