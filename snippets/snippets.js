@@ -18,14 +18,14 @@ function capitalizeFirstLetter (string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-console.log(capitalizeFirstLetter(str));
+// console.log(capitalizeFirstLetter(str));
 
 // Capitalize all words of a string. 
 function capitalizeWords (string) {
   return string.replace(/(?:^|\s)\S/g, function (a) { return a.toUpperCase(); });
 };
 
-console.log(capitalizeWords(str))
+// console.log(capitalizeWords(str))
 
 // Recursive Countdown
 
@@ -39,4 +39,48 @@ function countdown(n){
   }
 }
 
-console.log(countdown(10)); // log: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+// console.log(countdown(10)); // log: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+
+
+// Messing with arrays
+
+// reverse an array
+let arr = ['hello', 37, true, 'harry']
+
+const reverseArr = (arr) => {
+  return arr.reverse();
+}
+
+// console.log(reverseArr(arr))
+
+
+// Add to the beginning of an array
+
+const shiftArr = (arr) => {
+  arr.unshift('hey');
+  return arr
+}
+
+// console.log(shiftArr(arr))
+
+
+// push to the end of an array
+
+const pushArr = (arr) => {
+  arr.push('another')
+  return arr;
+}
+
+// console.log(pushArr(arr))
+
+
+// pop from the end of an array
+
+const popArr = (arr) => {
+  arr.pop()
+  return arr;
+}
+
+// console.log(popArr(arr))
+
+
