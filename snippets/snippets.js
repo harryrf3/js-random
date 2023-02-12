@@ -29,13 +29,13 @@ function capitalizeWords (string) {
 
 // Recursive Countdown
 
-function countdown(n){
-  if(n <= 0) {
-    return []
+function countdown (n) {
+  if (n <= 0) {
+    return [];
   } else {
-  const countArray = countdown(n - 1)
-  countArray.unshift(n)
-  return countArray
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
   }
 }
 
@@ -45,11 +45,11 @@ function countdown(n){
 // Messing with arrays
 
 // reverse an array
-let arr = ['hello', 37, true, 'harry']
+let arr = ['hello', 37, true, 'harry'];
 
 const reverseArr = (arr) => {
   return arr.reverse();
-}
+};
 
 // console.log(reverseArr(arr))
 
@@ -58,8 +58,8 @@ const reverseArr = (arr) => {
 
 const shiftArr = (arr) => {
   arr.unshift('hey');
-  return arr
-}
+  return arr;
+};
 
 // console.log(shiftArr(arr))
 
@@ -67,9 +67,9 @@ const shiftArr = (arr) => {
 // push to the end of an array
 
 const pushArr = (arr) => {
-  arr.push('another')
+  arr.push('another');
   return arr;
-}
+};
 
 // console.log(pushArr(arr))
 
@@ -77,9 +77,9 @@ const pushArr = (arr) => {
 // pop from the end of an array
 
 const popArr = (arr) => {
-  arr.pop()
+  arr.pop();
   return arr;
-}
+};
 
 // console.log(popArr(arr))
 
@@ -94,4 +94,15 @@ const reduceArr = arrNums.reduce(
 // console.log(reduceArr);
 
 
+// sum all numbers divisible by 2
+
+const arrNumsAgain = [25, -1, 230, -2, -3, 15, 20, 2];
+
+const sumDivByTwo = () => {
+  return arrNumsAgain
+    .filter(item => item % 2 === 0)
+    .reduce((prev, curr) => prev + curr, 0);
+};
+
+// console.log(sumDivByTwo());
 
