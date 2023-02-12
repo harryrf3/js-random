@@ -83,4 +83,15 @@ const popArr = (arr) => {
 
 // console.log(popArr(arr))
 
+// sum an array without negative numbers
+
+const arrNums = [25, -1, 230, -2, -3];
+
+const reduceArr = arrNums.reduce(
+  (prev, curr) => (curr > 0 ? prev + curr : prev),
+  0
+);
+// console.log(reduceArr);
+
+
 
