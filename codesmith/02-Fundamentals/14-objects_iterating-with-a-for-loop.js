@@ -12,20 +12,15 @@ const checkObj = {
   oddNum: 1,
   evenNum: 2,
   foundNum: 5,
-  randomNum: 18,
+  randomNum: 18
 };
 
 let divBy6 = false;
-
-let objToArray = Object.values(checkObj);
-
-// console.log('VALUES:', objToArray);
-
-for (let i = 0; i < objToArray.length; i++) {
-  // console.log(objToArray[i]);
-  if (objToArray[i] % 6) {
-    divBy6 = true;
+// ADD CODE HERE
+const objToArray = Object.values(checkObj)
+// console.log(objToArray)
+for (const values in checkObj) {
+  if (checkObj[values] % 6 === 0) {
+    divBy6 = true
   }
 }
-
-console.log('divBy6 =', divBy6);
