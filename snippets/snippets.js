@@ -11,7 +11,7 @@
 // console.log(puzzleInput);
 
 
-// Capitalize the first letter of a word
+// * Capitalize the first letter of a word
 const str = 'hello there';
 
 function capitalizeFirstLetter (string) {
@@ -20,14 +20,14 @@ function capitalizeFirstLetter (string) {
 
 // console.log(capitalizeFirstLetter(str));
 
-// Capitalize all words of a string. 
+// * Capitalize all words of a string. 
 function capitalizeWords (string) {
   return string.replace(/(?:^|\s)\S/g, function (a) { return a.toUpperCase(); });
 };
 
 // console.log(capitalizeWords(str))
 
-// Recursive Countdown
+// * Recursive Countdown
 
 function countdown (n) {
   if (n <= 0) {
@@ -44,7 +44,7 @@ function countdown (n) {
 
 // Messing with arrays
 
-// reverse an array
+// * reverse an array
 let arr = ['hello', 37, true, 'harry'];
 
 const reverseArr = (arr) => {
@@ -54,7 +54,7 @@ const reverseArr = (arr) => {
 // console.log(reverseArr(arr))
 
 
-// Add to the beginning of an array
+// * Add to the beginning of an array
 
 const shiftArr = (arr) => {
   arr.unshift('hey');
@@ -64,7 +64,7 @@ const shiftArr = (arr) => {
 // console.log(shiftArr(arr))
 
 
-// push to the end of an array
+// * push to the end of an array
 
 const pushArr = (arr) => {
   arr.push('another');
@@ -74,7 +74,7 @@ const pushArr = (arr) => {
 // console.log(pushArr(arr))
 
 
-// pop from the end of an array
+// * pop from the end of an array
 
 const popArr = (arr) => {
   arr.pop();
@@ -83,7 +83,7 @@ const popArr = (arr) => {
 
 // console.log(popArr(arr))
 
-// sum an array without negative numbers
+// * sum an array without negative numbers
 
 const arrNums = [25, -1, 230, -2, -3];
 
@@ -94,7 +94,7 @@ const reduceArr = arrNums.reduce(
 // console.log(reduceArr);
 
 
-// sum all numbers divisible by 2
+// * sum all numbers divisible by 2
 
 const arrNumsAgain = [25, -1, 230, -2, -3, 15, 20, 2];
 
@@ -105,4 +105,28 @@ const sumDivByTwo = () => {
 };
 
 // console.log(sumDivByTwo());
+
+
+// * sum all positive numbers
+
+
+const sumAllPos = () => {
+  return arrNumsAgain
+    .filter(item => item > 0)
+    .reduce((prev, curr) => prev + curr, 0);
+};
+
+// console.log(sumAllPos());
+
+
+// * sum all negative numbers
+
+const sumAllNeg = () => {
+  return arrNumsAgain
+    .filter(item => item < 0)
+    .reduce((prev, curr) => prev + curr, 0);
+};
+
+console.log(sumAllNeg());
+
 
