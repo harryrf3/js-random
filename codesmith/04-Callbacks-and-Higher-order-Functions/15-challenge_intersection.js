@@ -28,6 +28,17 @@ function intersection (input) {
   return result;
 }
 
+// The above, but in 2023
+// const intersection = (input) => {
+//   return input.reduce((acc, curr) => {
+//     let result = []
+//     acc.forEach((el) => {
+//       if (curr.includes(el)) { result.push(el) }
+//     })
+//     return result
+//   })
+// }
+
 // Uncomment these to check your work!
 const arr1 = [5, 10, 15, 20];
 const arr2 = [15, 88, 1, 5, 7];

@@ -14,34 +14,21 @@ const { callbacks } = require("browser-sync/dist/logger")
 
 
 // ADD CODE HERE
-
-
-/*
- * First array: use callback to test each element to see if output matches
- * corresponding element by index of the second array.
-*/
-
-const objOfMatches = (prev, current, callback) => {
-
-  /*
-   * If match is found: (use elements to modify object)
-   *  # first array: element = key
-   *  # second array: element = value
-  */
-
-  // let obj = {}
-
-  prev.map(element => {
-    const obj = {}
-    if (callback(element) === current) {
-      console.log(element);
-      // obj[prev[element]] = current[element]
+const objOfMatches = (arr1, arr1, callback) => {
+  let result = {}
+	for (let i = 0; i < arr1.length; i++) {
+    if(callback(arr1[i]) === arr2[i]) {
+      result[arr1[i]] = arr2[i]
     }
-    return obj
-  })
+  }
+  return result
+} 
 
-  // return obj
-}
+// Uncomment these to check your work!
+const arr1 = ['hi', 'howdy', 'bye', 'later', 'hello'];
+const arr2 = ['HI', 'Howdy', 'BYE', 'later', 'HELLO'];
+function uppercaser(str) { return str.toUpperCase(); }
+console.log(objOfMatches(arr1, arr2, uppercaser)); // should log: { hi: 'HI', bye: 'BYE', hello: 'HELLO' }
 
 
 // Uncomment these to check your work!

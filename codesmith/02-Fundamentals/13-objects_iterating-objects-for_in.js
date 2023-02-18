@@ -9,7 +9,7 @@
  * @harryrf3 (2022-02-15T08:16:57.000-05:00)
  ***/
 
- const checkObj = {
+const checkObj = {
   oddNum: 1,
   evenNum: 2,
   foundNum: 5,
@@ -18,11 +18,10 @@
 
 const objToArray = [];
 
-const returnedKeys = Object.keys(checkObj);
-
-for (const property in returnedKeys) {
-  if (property >= 2) {
-    objToArray.push(property);
+for (const property in checkObj) {
+  console.log(checkObj[property])
+  if (checkObj[property] >= 2) {
+    objToArray.push(checkObj[property]);
   }
 }
 
