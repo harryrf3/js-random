@@ -12,6 +12,4 @@ const bubbleSort = (array) => {
   return arr;
 };
 
-
-
 console.log(bubbleSort(nums))
